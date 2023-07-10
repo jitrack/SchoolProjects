@@ -1,0 +1,197 @@
+[
+    {
+        "Name": "Gmail",
+        "Actions": [{
+            "Name": "OnEmail",
+            "Description": "Trigger when the user receive an email",
+            "Variables": [
+                {"Name": "Subject", "Type": "string", "Description": "Subject of the email"}
+            ]
+        }],
+        "Reactions": [{
+            "Name": "SendEmail",
+            "Description": "Send an email",
+            "Params": [
+                {"Name": "Receiver", "Type": "string", "Description": "Email address of the receiver"},
+                {"Name": "Object", "Type": "string", "Description": "Object of the email"},
+                {"Name": "Content", "Type": "string", "Description": "Content of the email"}
+            ]
+        }]
+    },
+    {
+        "Name": "Youtube",
+        "Actions": [{
+            "Name": "OnPostedVideo",
+            "Description": "Triggers when a youtuber x publish a video",
+            "Params": [
+                {"Name":  "ChannelId", "Type": "String", "Description":"Username of the channel monitored"}
+            ]
+        }],
+        "Reactions": [{
+            "Name": "PutRate",
+            "Description": "Add/Remove a rating to a video",
+            "Params": [
+                {"Name":  "VideoId", "Type": "String", "Description":"Id of the video"},
+                {"Name":  "Rating", "Type": "String", "Description":"Rating for the video (like or dislike)"}
+            ]
+        }]
+    },
+    {
+        "Name": "Github",
+        "Actions": [{
+            "Name": "OnPush",
+            "Description": "Trigger when a push in made on a repository with your account",
+            "Params": [
+                {"Name": "Repository", "Type": "string", "Description": "Repository that will be triggered by this event"}
+            ],
+            "Variables": [
+                {"Name": "Author", "Type": "string", "Description": "Author of the commit"},
+                {"Name": "Commit", "Type": "string", "Description": "Description of the commit"}
+            ]
+        }, {
+            "Name": "OnPullRequest",
+            "Description": "Trigger when a pull request in made on a repository with your account",
+            "Params": [
+                {"Name": "Repository", "Type": "string", "Description": "Repository that will be triggered by this event"}
+            ],
+            "Variables": []
+        }, {
+            "Name": "OnWorkflow",
+            "Description": "Trigger workflow  event made on a repository with your account",
+            "Params": [
+                {"Name": "Repository", "Type": "string", "Description": "Repository that will be triggered by this event"}
+            ],
+            "Variables": []
+        }],
+        "Reactions": [{
+            "Name": "CreateIssue",
+            "Description": "Create an issue",
+            "Params": [
+                {"Name": "Repository", "Type": "string", "Description": "Repository that will be triggered by this event"},
+                {"Name": "Title", "Type": "string", "Description": "Title of the issue"}
+            ],
+            "Variables": []
+        },
+            {
+                "Name": "CreateIPullRequest",
+                "Description": "Create a pull request",
+                "Params": [
+                    {"Name": "Repository", "Type": "string", "Description": "Repository that will be triggered by this event"},
+                    {"Name": "Title", "Type": "string", "Description": "Title of the pull request"},
+                    {"Name": "Body", "Type": "string", "Description": "Body of the pull request"},
+                    {"Name": "Head", "Type": "string", "Description": "Head branch"},
+                    {"Name": "BaseRef", "Type": "string", "Description": "BaseRef branch"}
+                ],
+                "Variables": []
+            }]
+    },
+    {
+        "Name": "Weather",
+        "Actions": [{
+            "Name": "TemperatureBelowValue",
+            "Description": "Trigger when the temperature is below a value",
+            "Params": [
+                {"Name": "City", "Type": "string", "Description": "City where the temperature is measured"},
+                {"Name": "Value", "Type": "number", "Description": "Value that the temperature must be above"}
+            ],
+            "Variables": []
+            },
+            {
+                "Name": "WeatherRainy",
+                "Description": "Trigger when the weather is rainy",
+                "Params": [
+                    {"Name": "City", "Type": "string", "Description": "City where the weather is measured"}
+                ],
+                "Variables": []
+            },
+            {
+                "Name": "AirQualityBelowValue",
+                "Description": "Trigger when the air quality is below a value",
+                "Params": [
+                    {"Name": "City", "Type": "string", "Description": "City where the air quality is measured"},
+                    {"Name": "Value", "Type": "number", "Description": "Value that the air quality must be below"}
+                ],
+                "Variables": []
+            },
+            {
+                "Name": "CloudCoverBelowValue",
+                "Description": "Trigger when the cloud cover is below a value",
+                "Params": [
+                    {"Name": "City", "Type": "string", "Description": "City where the air quality is measured"},
+                    {"Name": "Value", "Type": "number", "Description": "Value that the cloud cover must be below"}
+                ],
+                "Variables": []
+            },
+            {
+                "Name": "WindSpeedBelowValue",
+                "Description": "Trigger when the wind speed is below a value",
+                "Params": [
+                    {"Name": "City", "Type": "string", "Description": "City where the air quality is measured"},
+                    {"Name": "Value", "Type": "number", "Description": "Value that the wind speed must be below"}
+                ],
+                "Variables": []
+            },
+            {
+                "Name": "RainPercentageBelowValue",
+                "Description": "Trigger when the rain percentage is below a value",
+                "Params": [
+                    {"Name": "City", "Type": "string", "Description": "City where the air quality is measured"},
+                    {"Name": "Value", "Type": "number", "Description": "Value that the rain percentage must be below"}
+                ],
+                "Variables": []
+            }],
+        "Reactions": []
+    },
+    {
+        "Name": "Trello",
+        "Actions": [
+            {
+                "Name": "OnCardCreated",
+                "Description": "Trigger when a card is created or deleted",
+                "Params": [
+                    {"Name": "ListId", "Type": "string", "Description": "The id of the list where the card is created"}
+                ],
+                "Variables": [
+                    {"Name": "Differences", "Type": "string", "Description": "Number of deleted or added card"}
+                ]
+            }
+        ],
+        "Reactions": [
+            {
+                "Name": "CreateBoard",
+                "Description": "Create a new board",
+                "Params": [
+                    {"Name": "Name", "Type": "string", "Description": "Name of the board"}
+                ]
+            },
+            {
+                "Name": "CreateList",
+                "Description": "Create a new list",
+                "Params": [
+                    {"Name": "BoardId", "Type": "string", "Description": "Id of the board"},
+                    {"Name": "Name", "Type": "string", "Description": "Name of the list"}
+                ]
+            },
+            {
+                "Name": "CreateCard",
+                "Description": "Create a new card",
+                "Params": [
+                    {"Name": "ListId", "Type": "string", "Description": "Id of the list"},
+                    {"Name": "Name", "Type": "string", "Description": "Name of the card"},
+                    {"Name": "Description", "Type": "string", "Description": "Description of the card"}
+                ]
+            }]
+    },
+    {
+        "Name": "Pornhub",
+        "Actions": [{
+            "Name": "PornstarNewVideo",
+            "Description": "Trigger when a new video is uploaded by a pornstar",
+            "Variables": [],
+            "Params": [
+                {"Name": "Name", "Type": "string", "Description": "Name of the pornstar"}
+            ]
+        }],
+        "Reactions": []
+    }
+]

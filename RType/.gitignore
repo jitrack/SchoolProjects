@@ -1,0 +1,16 @@
+build/bin/babel.db
+*.out
+.idea
+.vs
+bin
+build
+.DS_Store
+cmake-build-debug
+*.cbp
+Testing
+cmake_install.cmake
+CMakeCache.txt
+CMakeFiles/
+babel.db
+CMakeLists.txt
+conanfile.txt

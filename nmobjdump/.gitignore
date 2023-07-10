@@ -1,0 +1,9 @@
+bin
+*.o
+my_nm
+my_objdump
+vgcore*
+*.sh
+a.out
+aout
+libprintf.a
