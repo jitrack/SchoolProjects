@@ -1,6 +1,6 @@
-### Pré-requis
+### Prerequisites
 
-De quoi avez-vous besoin pour installer le logiciel ?
+What do you need to install the software?
 
 ```
 gcc
@@ -9,9 +9,9 @@ make
 
 ### Installation
 
-Voici comment lancer le projet sur votre ordinateur:
+Here's how to launch the project on your computer:
 
-Cloner et se placer dans le répertoire 42sh
+Clone and move to the 42sh directory
 
 ```
 make re
