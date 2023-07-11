@@ -1,4 +1,4 @@
-Subject:
+# Subject:
 
 The goal of this project is to code a simple nm and objdump clone.
 
