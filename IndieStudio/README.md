@@ -24,4 +24,3 @@ Bomberman clone, 2nd year project
 
 - `cmake .`
 - `make re`
-- `./bomberman`
