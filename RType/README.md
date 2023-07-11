@@ -7,3 +7,7 @@ This project was not completed but my part is working. I had to make the tools t
   - Some Server and Client ECS
   - SharedLib class
   - Network class
+
+## building instructions
+
+- `./build_linux.sh` or `build_macos.sh`
