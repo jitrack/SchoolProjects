@@ -1,0 +1,13 @@
+arcade
+*.o
+vgcore*
+*.so
+*.a
+.idea
+.vscode
+*.sh
+.DS_Store
+
+CMakeLists.txt
+cmake-build-default
+CMakeFiles
